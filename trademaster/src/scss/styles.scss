@@ -1,0 +1,47 @@
+// ==============================
+// Global SCSS for TradeMaster
+// ==============================
+
+// ------------------------------
+// Step 1: All @use statements first
+// ------------------------------
+@use "@coreui/coreui/scss/coreui" as * with (
+  $enable-deprecation-messages: false
+);
+
+@use "@coreui/chartjs/scss/coreui-chartjs";
+@use "theme";
+//@use "fixes";  // optional, uncomment if needed
+@use "custom";
+@use "examples";
+@use '@angular/material' as mat;
+
+// ------------------------------
+// Step 2: Normal CSS / SCSS rules
+// ------------------------------
+html {
+  height: 100%;
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  height: 100%;
+}
+
+/* ------------------------------
+   Step 3: Optional global tweaks
+   ------------------------------
+   Add other global styles below if needed
+--------------------------------- */

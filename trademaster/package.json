@@ -1,0 +1,53 @@
+{
+  "name": "trademaster",
+  "description": "TradeMaster Admin Dashboard based on Angular and CoreUI",
+  "version": "5.6.21",
+  "copyright": "Copyright 2026 TradeMaster Team",
+  "license": "MIT",
+  "author": "TradeMaster Team",
+  "homepage": "https://trademaster.io/angular",
+  "config": {
+    "theme": "default",
+    "coreui_library_short_version": "5.6",
+    "coreui_library_docs_url": "https://trademaster.io/angular/docs/"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve -o",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "prebuild": "ng test --watch=false",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^21.2.5",
+    "@angular/cdk": "^21.2.3",
+    "@angular/common": "^21.2.5",
+    "@angular/compiler": "^21.2.5",
+    "@angular/core": "^21.2.5",
+    "@angular/forms": "^21.2.5",
+    "@angular/language-service": "^21.2.5",
+    "@angular/localize": "^21.2.5",
+    "@angular/material": "^21.2.4",
+    "@angular/platform-browser": "^21.2.5",
+    "@angular/platform-browser-dynamic": "^21.2.5",
+    "@angular/router": "^21.2.5",
+    "@coreui/angular": "~5.6.21",
+    "@coreui/angular-chartjs": "~5.6.21",
+    "@coreui/chartjs": "~4.1.0",
+    "@coreui/coreui": "~5.6.1",
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-angular": "~5.6.21",
+    "@coreui/utils": "^2.0.2",
+    "rxjs": "~7.8.2",
+    "zone.js": "~0.16.1"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.2.3",
+    "@angular/cli": "^21.2.3",
+    "@angular/compiler-cli": "^21.2.5",
+    "@types/node": "^24.12.0",
+    "typescript": "~5.9.3"
+  }
+}
