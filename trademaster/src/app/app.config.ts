@@ -1,5 +1,6 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
 
 import {
   provideRouter,
@@ -7,10 +8,12 @@ import {
   withHashLocation,
   withInMemoryScrolling,
   withRouterConfig,
-  withViewTransitions
+  withViewTransitions,
+  
 } from '@angular/router';
 import { IconSetService } from '@coreui/icons-angular';
 import { routes } from './app.routes';
+import { FormsModule } from '@angular/forms';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -27,6 +30,7 @@ export const appConfig: ApplicationConfig = {
       withHashLocation()
     ),
     IconSetService,
+    importProvidersFrom(FormsModule),
     provideAnimationsAsync()
   ]
 };
